@@ -5,8 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#222831",
+        secondary: "#31363F",
+        third: "#76ABAE",
+        light: "#EEEEEE"
+      },
+      fontFamily: {
+        body: ["Poppins", "sans-serif"]
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 
